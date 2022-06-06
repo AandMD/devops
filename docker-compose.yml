@@ -28,13 +28,6 @@ services:
         environment:
             MYSQL_ROOT_PASSWORD: pass
 
-    adminer:
-        image: adminer
-        restart: always
-        ports:
-            - "8080:8080"
-
-
     monitor:
         image: grafana/grafana-oss:8.2.0
         restart: always
