@@ -1,0 +1,11 @@
+server {
+	listen 80 ;
+	server_name metrics.local;
+
+	location  / {
+		proxy_pass http://monitor:3000;
+	}
+	access_log /var/log/nginx/metrics.local_access.log;
+	error_log /var/log/nginx/metrics.local_error.log;
+}
+	
